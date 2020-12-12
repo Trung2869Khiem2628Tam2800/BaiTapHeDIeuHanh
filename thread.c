@@ -59,7 +59,7 @@ static unsigned thread_ticks;   /* # of timer ticks since last yield. */
    Controlled by kernel command-line option "-o mlfqs". */
 bool thread_mlfqs;
 
-/* Solution Code */
+/* Solution Code */_
 fixed_t load_avg;
 
 static void kernel_thread (thread_func *, void *aux);
@@ -662,7 +662,7 @@ init_thread (struct thread *t, const char *name, int priority)
   /* Solution Code */
   t->base_priority = priority;
   list_init(&t->locks_holding);
-  t->lock_waiting4 = NULL;
+  t->lock_seeking = NULL;
   t->nice = 0;
   t->recent_cpu = FP_CONST (0);
 
